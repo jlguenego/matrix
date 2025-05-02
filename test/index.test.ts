@@ -1,8 +1,8 @@
-import { describe, it, expect } from "vitest";
-import { hello } from "../src/index";
+import { describe, it, expect } from 'vitest'
+import { hello } from '../src/index'
 
-describe("hello", () => {
-  it("renvoie un message de salutation", () => {
-    expect(hello("Jean")).toBe("Bonjour, Jean !");
-  });
-});
+describe('hello', () => {
+  it('renvoie un message de salutation', () => {
+    expect(hello('Jean')).toBe('Bonjour, Jean !')
+  })
+})
