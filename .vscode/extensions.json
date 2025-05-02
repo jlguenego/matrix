@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "meganrogge.template-string-converter",
+    "yatki.vscode-surround",
+    "usernamehw.errorlens"
+  ]
+}
