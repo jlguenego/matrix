@@ -1,3 +1,5 @@
+import { IDENTITY, ZERO } from './constants'
+
 export class Matrix {
   private data: number[][]
 
@@ -26,4 +28,7 @@ export class Matrix {
   get cols(): number {
     return this.data[0].length
   }
+
+  static IDENTITY = IDENTITY
+  static ZERO = ZERO
 }

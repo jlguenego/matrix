@@ -37,4 +37,14 @@ describe('Matrix Product', () => {
     expect(transposed.get(1, 0)).toBe(2)
     expect(transposed.get(1, 1)).toBe(4)
   })
+
+  it('test IDENTITY', () => {
+    const identity = Matrix.IDENTITY(3)
+    expect(identity.product(identity).equals(identity)).toBe(true)
+  })
+  it('test ZERO', () => {
+    const identity = Matrix.IDENTITY(3)
+    const zero = Matrix.ZERO(3)
+    expect(identity.product(zero).equals(zero)).toBe(true)
+  })
 })
