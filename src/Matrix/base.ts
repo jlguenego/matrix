@@ -26,16 +26,4 @@ export class Matrix {
   get cols(): number {
     return this.data[0].length
   }
-
-  transpose(): Matrix {
-    const rows = this.data.length
-    const cols = this.data[0].length
-    const transposed = new Matrix(cols, rows) // Create a new Matrix with swapped dimensions
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        transposed.set(j, i, this.get(i, j)) // Set the transposed value
-      }
-    }
-    return transposed // Return the new transposed matrix
-  }
 }
