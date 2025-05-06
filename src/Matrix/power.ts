@@ -14,7 +14,7 @@ Matrix.prototype.power = function (this: Matrix, n: number): Matrix {
     throw new Error('Matrix must be square')
   }
   if (n === 0) return Matrix.IDENTITY(this.rows)
-  if (n === 1) return new Matrix(this.data)
+  if (n === 1) return this.clone()
 
   // eslint-disable-next-line @typescript-eslint/no-this-alias
   let result = this
