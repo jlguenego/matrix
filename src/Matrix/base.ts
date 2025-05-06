@@ -3,15 +3,20 @@ import { IDENTITY, ZERO } from './constants'
 export class Matrix {
   private data: number[][]
 
-  constructor(rows: number, cols: number)
-  constructor(data: number[][]) // Overloaded constructor
-
-  constructor(rowsOrData: number | number[][], cols?: number) {
+  constructor(rowsOrData: number | number[][], cols?: number, constant: number = 0) {
     if (Array.isArray(rowsOrData)) {
-      this.data = rowsOrData // If the first argument is an array, use it directly
+      this.data = rowsOrData.map((row) => [...row])
       return
     }
-    this.data = Array.from({ length: rowsOrData }, () => Array(cols).fill(0))
+
+    const rows = rowsOrData
+    if (typeof cols !== 'number') {
+      throw new Error('When first argument is a number, cols must be specified')
+    }
+
+    this.data = Array(rows)
+      .fill(null)
+      .map(() => Array(cols).fill(constant))
   }
 
   get(row: number, col: number): number {
@@ -25,6 +30,7 @@ export class Matrix {
   get rows(): number {
     return this.data.length
   }
+
   get cols(): number {
     return this.data[0].length
   }

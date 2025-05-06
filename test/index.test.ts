@@ -39,4 +39,23 @@ describe('Matrix base', () => {
     expect(transposed.get(1, 0)).toBe(2)
     expect(transposed.get(1, 1)).toBe(4)
   })
+
+  it('should create a matrix filled with a constant value', () => {
+    const matrix = new Matrix(2, 3, 1)
+    expect(matrix.rows).toBe(2)
+    expect(matrix.cols).toBe(3)
+    for (let i = 0; i < matrix.rows; i++) {
+      for (let j = 0; j < matrix.cols; j++) {
+        expect(matrix.get(i, j)).toBe(1)
+      }
+    }
+
+    // Test default value (0)
+    const zeroMatrix = new Matrix(2, 2)
+    for (let i = 0; i < zeroMatrix.rows; i++) {
+      for (let j = 0; j < zeroMatrix.cols; j++) {
+        expect(zeroMatrix.get(i, j)).toBe(0)
+      }
+    }
+  })
 })

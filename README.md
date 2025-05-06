@@ -13,8 +13,11 @@ npm install @jlguenego/matrix
 ```typescript
 import { Matrix } from '@jlguenego/matrix'
 
-// Create an empty 2x3 matrix
-const matrix = new Matrix(2, 3)
+// Create a 2x3 matrix filled with zeros
+const zeros = new Matrix(2, 3)
+
+// Create a 2x3 matrix filled with ones
+const ones = new Matrix(2, 3, 1)
 
 // Create a matrix from an array
 const matrix = new Matrix([
@@ -27,7 +30,8 @@ const matrix = new Matrix([
 
 ### Creation
 
-- `new Matrix(rows: number, cols: number)` - Creates an empty matrix with given dimensions
+- `new Matrix(rows: number, cols: number)` - Creates an empty matrix with given dimensions (filled with zeros)
+- `new Matrix(rows: number, cols: number, constant: number)` - Creates a matrix filled with the specified constant value
 - `new Matrix(data: number[][])` - Creates a matrix from a 2D array
 
 ### Methods
