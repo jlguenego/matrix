@@ -7,5 +7,7 @@ import './Matrix/product'
 import './Matrix/times'
 import './Matrix/determinant'
 import './Matrix/inverse'
+import './Matrix/rank'
+import './Matrix/eigen'
 
 export { Matrix } // Export the Matrix class for use in other modules
