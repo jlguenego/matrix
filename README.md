@@ -1,6 +1,6 @@
 # @jlguenego/matrix
 
-Une bibliothèque TypeScript pour manipuler les matrices en JavaScript.
+A TypeScript library for matrix operations in JavaScript.
 
 ## Installation
 
@@ -8,15 +8,15 @@ Une bibliothèque TypeScript pour manipuler les matrices en JavaScript.
 npm install @jlguenego/matrix
 ```
 
-## Utilisation
+## Usage
 
 ```typescript
 import { Matrix } from '@jlguenego/matrix'
 
-// Créer une matrice vide 2x3
+// Create an empty 2x3 matrix
 const matrix = new Matrix(2, 3)
 
-// Créer une matrice à partir d'un tableau
+// Create a matrix from an array
 const matrix = new Matrix([
   [1, 2],
   [3, 4],
@@ -25,32 +25,32 @@ const matrix = new Matrix([
 
 ## API
 
-### Création
+### Creation
 
-- `new Matrix(rows: number, cols: number)` - Crée une matrice vide de dimensions données
-- `new Matrix(data: number[][])` - Crée une matrice à partir d'un tableau 2D
+- `new Matrix(rows: number, cols: number)` - Creates an empty matrix with given dimensions
+- `new Matrix(data: number[][])` - Creates a matrix from a 2D array
 
-### Méthodes
+### Methods
 
-#### Opérations matricielles
+#### Matrix Operations
 
-- `add(other: Matrix)` - Addition de matrices
-- `minus(other: Matrix)` - Soustraction de matrices
-- `product(other: Matrix)` - Multiplication de matrices
-- `transpose()` - Transpose la matrice
+- `add(other: Matrix)` - Matrix addition
+- `minus(other: Matrix)` - Matrix subtraction
+- `product(other: Matrix)` - Matrix multiplication
+- `transpose()` - Transposes the matrix
 
-#### Accesseurs
+#### Accessors
 
-- `get(row: number, col: number)` - Obtient la valeur à une position
-- `set(row: number, col: number, value: number)` - Définit une valeur
-- `get rows` - Nombre de lignes
-- `get cols` - Nombre de colonnes
+- `get(row: number, col: number)` - Gets value at position
+- `set(row: number, col: number, value: number)` - Sets a value
+- `get rows` - Number of rows
+- `get cols` - Number of columns
 
-#### Comparaison
+#### Comparison
 
-- `equals(other: Matrix)` - Compare deux matrices
+- `equals(other: Matrix)` - Compares two matrices
 
-## Développement
+## Development
 
 ```bash
 # Installation
@@ -63,10 +63,10 @@ pnpm test
 pnpm build
 ```
 
-## Licence
+## License
 
 ISC
 
-## Auteur
+## Author
 
 Jean-Louis GUENEGO
