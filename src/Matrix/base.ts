@@ -3,7 +3,7 @@ import { IDENTITY, ZERO } from './constants'
 export class Matrix {
   private data: number[][]
 
-  constructor(rowsOrData: number | number[][], cols?: number, constant: number = 0) {
+  constructor(rowsOrData: number | number[][], cols?: number, constant = 0) {
     if (Array.isArray(rowsOrData)) {
       this.data = rowsOrData.map((row) => [...row])
       return
