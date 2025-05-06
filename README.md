@@ -24,6 +24,16 @@ const matrix = new Matrix([
   [1, 2],
   [3, 4],
 ])
+
+// Calculate eigenvalues of a 2x2 matrix
+const eigen = new Matrix([
+  [4, 1],
+  [1, 1],
+])
+const eigenvalues = eigen.eigenvalues() // returns [4.30278, 0.69722]
+
+// Calculate matrix rank
+const rank = matrix.rank() // returns 2
 ```
 
 ## API
@@ -42,6 +52,11 @@ const matrix = new Matrix([
 - `minus(other: Matrix)` - Matrix subtraction
 - `product(other: Matrix)` - Matrix multiplication
 - `transpose()` - Transposes the matrix
+- `inverse()` - Returns the inverse of the matrix (if it exists)
+- `determinant()` - Calculates the determinant of the matrix
+- `rank()` - Calculates the rank of the matrix
+- `eigenvalues()` - Returns eigenvalues of a 2x2 matrix (throws error for complex eigenvalues)
+- `clone()` - Creates a deep copy of the matrix
 
 #### Accessors
 
@@ -49,10 +64,16 @@ const matrix = new Matrix([
 - `set(row: number, col: number, value: number)` - Sets a value
 - `get rows` - Number of rows
 - `get cols` - Number of columns
+- `toArray()` - Returns a deep copy of the matrix data
 
 #### Comparison
 
 - `equals(other: Matrix)` - Compares two matrices
+
+#### Static Methods
+
+- `Matrix.IDENTITY(n: number)` - Creates an n×n identity matrix
+- `Matrix.ZERO(rows: number, cols: number)` - Creates a zero matrix
 
 ## Development
 

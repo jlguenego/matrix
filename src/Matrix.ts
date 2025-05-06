@@ -9,5 +9,6 @@ import './Matrix/determinant'
 import './Matrix/inverse'
 import './Matrix/rank'
 import './Matrix/eigen'
+import './Matrix/clone'
 
 export { Matrix } // Export the Matrix class for use in other modules
