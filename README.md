@@ -34,6 +34,15 @@ const eigenvalues = eigen.eigenvalues() // returns [4.30278, 0.69722]
 
 // Calculate matrix rank
 const rank = matrix.rank() // returns 2
+
+// LU Decomposition example
+const matrix = new Matrix([
+  [4, 3],
+  [6, 3],
+])
+const { L, U } = matrix.lu()
+// L = [[1, 0], [1.5, 1]]
+// U = [[4, 3], [0, -1.5]]
 ```
 
 ## API
@@ -57,6 +66,7 @@ const rank = matrix.rank() // returns 2
 - `rank()` - Calculates the rank of the matrix
 - `eigenvalues()` - Returns eigenvalues of a 2x2 matrix (throws error for complex eigenvalues)
 - `clone()` - Creates a deep copy of the matrix
+- `lu()` - Returns LU decomposition as { L: Matrix, U: Matrix }. L is lower triangular with ones on diagonal, U is upper triangular, and A = LU
 
 #### Accessors
 
