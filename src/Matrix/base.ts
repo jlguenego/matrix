@@ -35,6 +35,10 @@ export class Matrix {
     return this.data[0].length
   }
 
+  toArray(): number[][] {
+    return this.data.map((row) => [...row])
+  }
+
   static IDENTITY = IDENTITY
   static ZERO = ZERO
 }
