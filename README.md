@@ -60,6 +60,7 @@ const { L, U } = matrix.lu()
 - `add(other: Matrix)` - Matrix addition
 - `minus(other: Matrix)` - Matrix subtraction
 - `product(other: Matrix)` - Matrix multiplication
+- `scalarmul(scalar: number)` - Multiplies every element by a scalar
 - `transpose()` - Transposes the matrix
 - `inverse()` - Returns the inverse of the matrix (if it exists)
 - `determinant()` - Calculates the determinant of the matrix
